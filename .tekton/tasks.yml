@@ -2,7 +2,8 @@
 #task Create cleanup Tekton task
 apiVersion: tekton.dev/v1beta1
 kind: Task
-name: cleanup
+metadata:
+  name: cleanup
 spec:
   description: This task will clean up a workspace by deleting all the files.
   workspaces:
@@ -38,7 +39,8 @@ spec:
 #Create test Tekton task
 apiVersion: tekton.dev/v1beta1
 kind: Task
-name: nose
+metadata:
+  name: nose
 spec:
   workspaces:
     - name: source
